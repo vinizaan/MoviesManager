@@ -14,7 +14,6 @@ data class Movie (
     var releaseYear: Int = 0,
     var studio: String = "",
     var durationMinutes: Int = 0,
-    var watched: Boolean = false,
     var movieWatched: Int = MOVIE_WATCHED_FALSE,
     var userRating: Float = 0f,
     var genre: String = "",
