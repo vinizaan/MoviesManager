@@ -3,4 +3,7 @@
     <string name="watched">Assistido\n</string>
     <string name="save">Salvar</string>
     <string name="add_movie">Add movie</string>
+    <string name="remove_movie">Remove movie</string>
+    <string name="edit_movie">Edit movie</string>
+    <string name="movies_list">Lista de Filmes</string>
 </resources>
