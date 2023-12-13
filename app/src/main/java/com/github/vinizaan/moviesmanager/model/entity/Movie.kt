@@ -7,15 +7,21 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 @Entity
-data class Task (
+data class Movie (
     @PrimaryKey
     var time: Long = INVALID_TIME,
-    var name: String = "",
-    var done: Int = TASK_DONE_FALSE
-): Parcelable {
+    val name: String = "",
+    var releaseYear: Int = 0,
+    var studio: String = "",
+    var durationMinutes: Int = 0,
+    var watched: Boolean = false,
+    var movieWatched: Int = MOVIE_WATCHED_FALSE,
+    var userRating: Float = 0f,
+    var genre: String = "",
+    ): Parcelable {
     companion object {
         const val INVALID_TIME = -1L
-        const val TASK_DONE_TRUE = 1
-        const val TASK_DONE_FALSE = 0
+        const val MOVIE_WATCHED_TRUE = 1
+        const val MOVIE_WATCHED_FALSE = 0
     }
 }

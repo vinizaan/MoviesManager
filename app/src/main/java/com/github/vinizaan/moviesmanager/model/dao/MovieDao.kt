@@ -8,16 +8,16 @@ import androidx.room.Update
 import com.github.vinizaan.moviesmanager.model.entity.Movie
 
 @Dao
-interface TaskDao {
+interface MovieDao {
     companion object {
-        const val TASK_TABLE = "task"
+        const val MOVIE_TABLE = "movie"
     }
     @Insert
-    fun createTask(movie: Movie)
-    @Query("SELECT * FROM $TASK_TABLE")
-    fun retrieveTasks(): List<Movie>
+    fun createMovie(movie: Movie)
+    @Query("SELECT * FROM $MOVIE_TABLE")
+    fun retrieveMovies(): List<Movie>
     @Update
-    fun updateTask(movie: Movie)
+    fun updateMovie(movie: Movie)
     @Delete
-    fun deleteTask(movie: Movie)
+    fun deleteMovie(movie: Movie)
 }
