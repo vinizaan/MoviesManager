@@ -4,63 +4,132 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.MovieFragment">
+    tools:context=".view.MovieFragment"
+    android:layout_margin="6dp">
+
+    <TextView
+        android:id="@id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="@string/name"
+        app:layout_constraintBottom_toTopOf="@+id/releaseYearTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/nameEt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:inputType="textCapSentences"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nameTv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/releaseYearTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/release_year"
+        app:layout_constraintBottom_toTopOf="@+id/studioTv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/nameEt" />
 
     <EditText
         android:id="@+id/releaseYearEt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nameEt"/>
+        app:layout_constraintStart_toEndOf="@+id/releaseYearTv"
+        app:layout_constraintTop_toBottomOf="@id/nameEt" />
+
+    <TextView
+        android:id="@+id/studioTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="@string/studio"
+        app:layout_constraintBottom_toTopOf="@+id/durationMinutesTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/releaseYearEt" />
 
     <EditText
         android:id="@+id/studioEt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="textCapWords"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/studioTv"
         app:layout_constraintTop_toBottomOf="@id/releaseYearEt" />
+
+    <TextView
+        android:id="@+id/durationMinutesTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-6dp"
+        android:text="@string/duration"
+        app:layout_constraintBottom_toTopOf="@+id/movieWatchedCb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studioEt" />
 
     <EditText
         android:id="@+id/durationMinutesEt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/studioEt"/>
+        app:layout_constraintHorizontal_bias="1.0"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/durationMinutesTv"
+        app:layout_constraintTop_toBottomOf="@id/studioEt" />
 
     <CheckBox
         android:id="@+id/movieWatchedCb"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/watched"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/durationMinutesEt" />
+
+    <TextView
+        android:id="@+id/userRatingTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="@string/rating"
+        app:layout_constraintBottom_toTopOf="@+id/genreTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movieWatchedCb" />
 
     <EditText
         android:id="@+id/userRatingEt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userRatingTv"
         app:layout_constraintTop_toBottomOf="@id/movieWatchedCb" />
 
-    <EditText
-        android:id="@+id/genreEt"
+    <TextView
+        android:id="@+id/genreTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/genre"
+        app:layout_constraintBottom_toTopOf="@+id/saveBt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userRatingEt" />
+
+    <Spinner
+        android:id="@+id/genreSp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/genreTv"
         app:layout_constraintTop_toBottomOf="@id/userRatingEt" />
 
     <Button
@@ -68,8 +137,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/save"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/genreEt" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genreSp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

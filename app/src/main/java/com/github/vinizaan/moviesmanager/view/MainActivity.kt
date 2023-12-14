@@ -17,4 +17,6 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(amb.mainTb)
         supportActionBar?.title = getString(R.string.app_name)
     }
+
+
 }

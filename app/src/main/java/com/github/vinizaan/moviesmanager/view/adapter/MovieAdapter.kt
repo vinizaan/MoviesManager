@@ -19,6 +19,7 @@ class MovieAdapter(
         RecyclerView.ViewHolder(tileMovieBinding.root) {
         val nameTv: TextView = tileMovieBinding.nameTv
         val genreTv: TextView = tileMovieBinding.genreTv
+        val ratingTv: TextView = tileMovieBinding.ratingTv
         val watchedCb: CheckBox = tileMovieBinding.watchedCb
 
         init {
@@ -61,6 +62,7 @@ class MovieAdapter(
             with(holder) {
                 nameTv.text = movie.name
                 genreTv.text = movie.genre
+                ratingTv.text = if(movie.userRating>0f) movie.userRating.toString() else "Not rated yet"
                 watchedCb.isChecked = movie.movieWatched == MOVIE_WATCHED_TRUE
             }
         }

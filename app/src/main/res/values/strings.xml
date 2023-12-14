@@ -1,9 +1,18 @@
 <resources>
     <string name="app_name">MoviesManager</string>
-    <string name="watched">Assistido\n</string>
-    <string name="save">Salvar</string>
+    <string name="watched">Watched</string>
+    <string name="save">Save</string>
     <string name="add_movie">Add movie</string>
     <string name="remove_movie">Remove movie</string>
     <string name="edit_movie">Edit movie</string>
-    <string name="movies_list">Lista de Filmes</string>
+    <string name="movies_list">Movies list</string>
+    <string name="movie_details">Movie details</string>
+    <string name="name">Name: </string>
+    <string name="release_year">Release Year: </string>
+    <string name="studio">Studio: </string>
+    <string name="duration">Duration (min): </string>
+    <string name="rating">Rating: </string>
+    <string name="genre">Genre: </string>
+    <string name="sort_by_rating">Sort By Rating</string>
+    <string name="sort_by_name">Sort By Name</string>
 </resources>

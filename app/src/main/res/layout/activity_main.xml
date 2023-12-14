@@ -15,7 +15,11 @@
         app:titleTextColor="@color/design_default_color_on_primary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetEnd="16dp"
+        app:contentInsetRight="16dp"
+        app:contentInsetLeft="0dp" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/navigationHostFcv"
