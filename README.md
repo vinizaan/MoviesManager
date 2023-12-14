@@ -1,1 +1,1 @@
-Vídeo de demonstração do aplicativo disponível em: https://github.com/vinizaan/MoviesManager/blob/f522ebc16ffd18c12c97748f0b44c6b0029edf5b/video-demonstracao-moviesmanager.mkv
+Vídeo de demonstração do aplicativo disponível em: https://github.com/vinizaan/MoviesManager/blob/c369e734bd18eac19b72c8f3440e148beac6c93c/demonstracao-moviesmanager.mkv
